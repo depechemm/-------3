@@ -1,0 +1,202 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+    background-color: rgb(238, 233, 191);
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    padding: 32px;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: rgb(86, 78, 47);
+    text-align: center;
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.icon-h1 {
+    height: 38px;
+}
+
+.dataset {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dynamic-table-container {
+    width: 100%;
+    overflow-x: scroll;
+    border-radius: 10px;
+}
+
+.dynamic-table-container::-webkit-scrollbar {
+    background-color: rgb(241, 239, 213);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.dynamic-table-container::-webkit-scrollbar-thumb {
+    background-color: rgb(122, 121, 64);
+    border-radius: 10px;
+}
+
+.dynamic-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.dynamic-table th,
+.dynamic-table td {
+    cursor: pointer;
+    border: 1px solid rgb(86, 78, 47);
+}
+
+.dynamic-table th {
+    padding: 8px;
+    background-color: rgb(138, 124, 75);
+    color: rgb(227, 213, 162);
+    white-space: nowrap;
+}
+
+.dynamic-table td {
+    padding: 10px;
+    background-color: rgb(241, 239, 213);
+    white-space: nowrap;
+}
+
+thead th:hover {
+    background-color: rgb(120, 134, 75);
+}
+
+tbody td:hover {
+    background-color: rgb(189, 183, 125);
+}
+
+thead th:hover,
+tbody td:hover {
+    transition: background-color 0.5s ease;
+}
+
+
+input[type=text] {
+    border-color: rgb(122, 121, 64);
+    color: rgb(122, 121, 64);
+    background-color: rgb(241, 239, 213);
+    height: 30px;
+    min-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    max-width: auto;
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+#dataset-small,
+#dataset-big {
+    background-color: rgb(120, 134, 75);
+    color: rgb(241, 236, 196);
+}
+
+#load-dataset,
+#clean-search {
+    background-color: rgb(189, 183, 125);
+    color: rgb(77, 76, 33);
+    border-style: solid;
+    border-color: rgb(77, 76, 33);
+}
+
+#remove-dataset {
+    background-color: rgb(218, 111, 92);
+    color: rgb(49, 39, 35);
+    border-style: solid;
+    border-color: rgb(49, 39, 35);
+}
+
+.fade-in,
+.fade-in-search,
+.fade-in-table,
+.fade-in-pagination {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.active,
+.fade-in-search.active,
+.fade-in-table.active, 
+.fade-in-pagination.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.search,
+.pagination-block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(241, 239, 213);
+    border: 2px solid rgb(120, 134, 75);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+    background-color: rgb(120, 134, 75);
+}
+
+
+.start-end-button,
+.back-forward-button {
+    padding: 0;
+}
+
+.back-forward-button {
+    color: rgb(49, 39, 35);
+}
+
+.start-end-button {
+    color: rgb(120, 134, 75);
+}
+
+.count-rows {
+    margin-bottom: 10px;
+}

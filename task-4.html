@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамическая таблица</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Oi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="title">
+            <h1 class="fade-in">Динамическая таблица</h1>
+            <img src="json.svg" alt="" class="icon-h1 fade-in">
+        </div>
+        <div class="dataset fade-in">
+            <button id="dataset-small">Малый набор</button>
+            <button id="dataset-big">Большой набор</button>
+            <input type="text" id="dataset" placeholder="URL набора данных" />
+            <button id="load-dataset">Загрузить</button>
+            <button id="remove-dataset" disabled>Удалить</button>
+        </div>
+        <div class="search fade-in-search">
+            <input type="text" id="search" placeholder="Введите данные для поиска">
+            <button id="clean-search">Очистить</button>
+            <input type="checkbox" id="strict-search">
+            <label for="strict-search">Строгий поиск</label>
+        </div>
+        <div class="count-rows fade-in-table">
+            
+        </div>  
+        <div id="table-wrapper" class="dynamic-table-container  fade-in-table">
+            <table class="dynamic-table">
+                <thead>
+                    <!-- Динамически заполняется -->
+                </thead>
+                <tbody>
+                    <!-- Динамически заполняется -->
+                </tbody>
+            </table>
+        </div>
+        <div id="pagination" class="pagination-block fade-in-pagination">
+            <!-- Элементы пагинации -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
