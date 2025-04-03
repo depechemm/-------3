@@ -63,7 +63,6 @@ h1 {
     border-collapse: collapse;
 }
 
-
 .dynamic-table th,
 .dynamic-table td {
     cursor: pointer;
@@ -96,8 +95,8 @@ tbody td:hover {
     transition: background-color 0.5s ease;
 }
 
-
 input[type=text] {
+    border-style: solid;
     border-color: rgb(122, 121, 64);
     color: rgb(122, 121, 64);
     background-color: rgb(241, 239, 213);
@@ -106,6 +105,10 @@ input[type=text] {
     padding: 5px;
     border-radius: 10px;
     outline: none;
+}
+
+input:focus {
+    outline: none; /* Убирает стандартную обводку */
 }
 
 button {
@@ -182,7 +185,6 @@ input[type=checkbox] {
 input[type=checkbox]:checked {
     background-color: rgb(120, 134, 75);
 }
-
 
 .start-end-button,
 .back-forward-button {
